@@ -3,9 +3,7 @@ const router = express.Router();
 //cargar el schema
 let userSchema = require("../db/schemas/userSchema");
 
-// 1) Metodo HTTP (verbos HTTP)
-// 2) RUTA (VIrtual)
-// 3) EL ALGORITMO QUE YO PROGRAMO PARA RESPONDER ESA PETICION
+
 router.get("/get/:idUser", async function (req, res) {
     let idUser = req.params.idUser;
     let result = await userSchema.findUserById(idUser);
